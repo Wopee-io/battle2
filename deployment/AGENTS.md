@@ -153,7 +153,7 @@ Located in `blueprints/`. Define the "Infrastructure as Code" for Authentik:
 - **Routing**:
     - `auth.studio.wopee.io` -> `authentik-server:9000` (Priority 1200).
     - `studio.wopee.io` -> `spawner:8080` (Priority 10).
-    - `studio.wopee.io/<user>` -> `ovsc-<user>:3000` (Priority 200, handled dynamically by Traefik/Spawner).
+    - `studio.wopee.io/<user>` -> `ovsc-<user>:3002` (Priority 200, handled dynamically by Traefik/Spawner).
 
 ## Troubleshooting Principles
 

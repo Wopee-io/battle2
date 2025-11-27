@@ -15,33 +15,33 @@ Full-stack web app: React + TypeScript frontend, FastAPI + Python backend, Postg
 ### URLs (when running)
 | Service | URL |
 |---------|-----|
-| Frontend | http://localhost:3000 |
-| Backend API | http://localhost:8000 |
-| API Docs (Swagger) | http://localhost:8000/docs |
+| Frontend | http://localhost:3002 |
+| Backend API | http://localhost:8002 |
+| API Docs (Swagger) | http://localhost:8002/docs |
 
 ### Test Backend with curl
 ```bash
 # Health check
-curl http://localhost:8000/health
+curl http://localhost:8002/health
 
 # Register user
-curl -X POST http://localhost:8000/auth/register \
+curl -X POST http://localhost:8002/auth/register \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","username":"testuser","password":"testpass123"}'
 
 # Login (get JWT token)
-curl -X POST http://localhost:8000/auth/token \
+curl -X POST http://localhost:8002/auth/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=test@example.com&password=testpass123"
 
 # Authenticated request (replace <token>)
-curl http://localhost:8000/auth/me -H "Authorization: Bearer <token>"
+curl http://localhost:8002/auth/me -H "Authorization: Bearer <token>"
 ```
 
 ### Test Frontend with Chrome MCP
 ```
 # 1. Open frontend
-mcp__chrome-devtools__navigate_page url="http://localhost:3000"
+mcp__chrome-devtools__navigate_page url="http://localhost:3002"
 
 # 2. Inspect page structure
 mcp__chrome-devtools__take_snapshot

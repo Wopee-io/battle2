@@ -27,9 +27,9 @@ Project context for AI coding assistants. Keep this concise and actionable.
 
 ### URLs (Development)
 
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Docs: http://localhost:8000/docs
+- Frontend: http://localhost:3002
+- Backend API: http://localhost:8002
+- API Docs: http://localhost:8002/docs
 
 ### URLs (Production)
 
@@ -43,10 +43,10 @@ After modifying backend code, verify with curl:
 
 ```bash
 # Health check
-curl http://localhost:8000/health
+curl http://localhost:8002/health
 
 # Test specific endpoint
-curl http://localhost:8000/your-endpoint
+curl http://localhost:8002/your-endpoint
 
 # View backend logs
 tail -f logs/backend.log
@@ -58,7 +58,7 @@ After modifying frontend code, verify with Chrome MCP:
 
 ```
 # Navigate to page
-mcp__chrome-devtools__navigate_page url="http://localhost:3000"
+mcp__chrome-devtools__navigate_page url="http://localhost:3002"
 
 # Get page structure (returns element UIDs)
 mcp__chrome-devtools__take_snapshot
@@ -336,7 +336,7 @@ docker compose logs battle-db  # Check for errors
 ### Frontend can't reach backend
 
 - Check Vite proxy config in `vite.config.ts`
-- Verify backend is running on port 8000
+- Verify backend is running on port 8002
 - Check browser console for network errors
 
 ## Resources

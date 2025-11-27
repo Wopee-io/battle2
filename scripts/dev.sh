@@ -12,9 +12,9 @@ if [ -f .env ]; then
 fi
 
 # Port defaults
-DB_PORT="${DB_PORT:-5432}"
-BACKEND_PORT="${BACKEND_PORT:-8000}"
-VITE_PORT="${VITE_PORT:-3000}"
+DB_PORT="${DB_PORT:-54322}"
+BACKEND_PORT="${BACKEND_PORT:-8002}"
+VITE_PORT="${VITE_PORT:-3002}"
 
 # Set DATABASE_URL for local development
 export DATABASE_URL="postgresql://${POSTGRES_USER:-battle}:${POSTGRES_PASSWORD:-changeme}@localhost:${DB_PORT}/${POSTGRES_DB:-battle}"

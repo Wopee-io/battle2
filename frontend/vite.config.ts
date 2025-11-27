@@ -10,18 +10,18 @@ export default defineConfig({
     },
   },
   server: {
-    port: parseInt(process.env.VITE_PORT || "3000", 10),
+    port: parseInt(process.env.VITE_PORT || "3002", 10),
     proxy: {
       "/auth": {
-        target: process.env.VITE_API_URL || "http://localhost:8000",
+        target: process.env.VITE_API_URL || "http://localhost:8002",
         changeOrigin: true,
       },
       "/items": {
-        target: process.env.VITE_API_URL || "http://localhost:8000",
+        target: process.env.VITE_API_URL || "http://localhost:8002",
         changeOrigin: true,
       },
       "/health": {
-        target: process.env.VITE_API_URL || "http://localhost:8000",
+        target: process.env.VITE_API_URL || "http://localhost:8002",
         changeOrigin: true,
       },
     },

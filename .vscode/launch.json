@@ -5,7 +5,7 @@
       "name": "Chrome: Frontend",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3002",
       "webRoot": "${workspaceFolder}/frontend"
     }
   ],

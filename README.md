@@ -27,9 +27,9 @@ cp .env.example .env
 docker compose up -d
 
 # Access the app
-# Frontend: http://localhost:3000
-# Backend API: http://localhost:8000
-# API Docs: http://localhost:8000/docs
+# Frontend: http://localhost:3002
+# Backend API: http://localhost:8002
+# API Docs: http://localhost:8002/docs
 ```
 
 ### Option 2: Local Development (VS Code)
@@ -38,7 +38,7 @@ The recommended way to run the full stack locally is via VS Code:
 
 1. Open the project folder in VS Code
 2. Press **F5** and select **"Full Stack Dev (DB in Docker + backend + frontend)"**
-3. Wait for the browser to open at http://localhost:3000
+3. Wait for the browser to open at http://localhost:3002
 
 This will:
 - Start PostgreSQL in Docker
@@ -56,7 +56,7 @@ docker compose up battle-db -d
 
 # 2. Start the backend (in backend/ folder)
 cd backend
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 --log-level debug
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8002 --log-level debug
 
 # 3. Start the frontend (in frontend/ folder, separate terminal)
 cd frontend
@@ -77,9 +77,9 @@ npm install
 ```
 
 **Access the app:**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Docs: http://localhost:8000/docs
+- Frontend: http://localhost:3002
+- Backend API: http://localhost:8002
+- API Docs: http://localhost:8002/docs
 
 ### Viewing Logs
 
